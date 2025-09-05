@@ -55,18 +55,18 @@ class OnlinePurchase:
 
 if __name__ == "__main__":
     client = OnlinePurchase()
-    cart = {
-        "Laptop": 1,
-        "Headphones": 2,
-        "Mouse": 1
-    }
-    coupon = "DISCOUNT10"
-    address = "123 Main St, Anytown, USA"
-    result = client.process_purchase(cart, coupon, address)
-    tiempo_inicial = time.time()
-    tiempo_final = time.time()
-    tiempo_total = tiempo_final - tiempo_inicial
-    print("el tiempo que el sistema duro fue:", tiempo_total)
+
+    for i in range(180):
+            cart = {
+                "Laptop": 1,
+                "Headphones": 2,
+                "Mouse": 1
+            }
+            coupon = "DISCOUNT10" if i % 2 == 0 else ""
+            address = "123 Main St, Anytown, USA"
+            result = client.process_purchase(cart, coupon, address)
+            print(result)           
+            time.sleep(1)  # Simulate processing time
 
 
 
