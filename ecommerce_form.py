@@ -53,3 +53,14 @@ class OnlinePurchase:
 
 
 if __name__ == "__main__":
+
+    validate_quantity = 98
+
+    validate_quantity(98)
+    
+
+
+    if validate_quantity < 1:
+        print(" Error: Quantity must be an integer greater than 0.")
+    
+   
