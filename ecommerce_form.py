@@ -53,14 +53,17 @@ class OnlinePurchase:
 
 
 if __name__ == "__main__":
-
-    validate_quantity = 98
-
-    validate_quantity(98)
+    client = OnlinePurchase()
+    
+    validated_address = client.validate_address("fdgthyjukil")
+    if validated_address != True:
+        print("Address is invalid.")
+    else:
+        print(".")
+    coupon = "DISCOUNT10"
+    address = "123 Main St, Anytown, USA"
     
 
 
-    if validate_quantity < 1:
-        print(" Error: Quantity must be an integer greater than 0.")
     
    
