@@ -56,17 +56,18 @@ class OnlinePurchase:
 if __name__ == "__main__":
     client = OnlinePurchase()
 
+    valid_coupon = "DISCOUNT80"
+
+
+    if client.validate_coupon(valid_coupon):
+        print("Coupon is valid.")
+    else:
+        print("Coupon is not valid.")
+
  
-    cart = {
-        "Laptop": 1,
-        "Headphones": 2,
-        "Mouse": 1
-    }
-    coupon = "DISCOUNT10" 
-    address = "123 Main St, Anytown, USA"
-    result = client.process_purchase(cart, coupon, address)
-    print(result)           
-      
+
+
+
 
 
 
