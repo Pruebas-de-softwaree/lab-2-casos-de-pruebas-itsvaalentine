@@ -1,3 +1,4 @@
+import time
 
 class OnlinePurchase:
     def __init__(self):
@@ -54,15 +55,19 @@ class OnlinePurchase:
 
 if __name__ == "__main__":
     client = OnlinePurchase()
-    
-    validated_address = client.validate_address("fdgthyjukil")
-    if validated_address != True:
-        print("Address is invalid.")
-    else:
-        print(".")
+    cart = {
+        "Laptop": 1,
+        "Headphones": 2,
+        "Mouse": 1
+    }
     coupon = "DISCOUNT10"
     address = "123 Main St, Anytown, USA"
-    
+    result = client.process_purchase(cart, coupon, address)
+    tiempo_inicial = time.time()
+    tiempo_final = time.time()
+    tiempo_total = tiempo_final - tiempo_inicial
+    print("el tiempo que el sistema duro fue:", tiempo_total)
+
 
 
     
